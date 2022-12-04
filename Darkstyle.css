@@ -1,0 +1,569 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap');
+
+:root{
+    --primary-color:rgb(250,250,210);
+    --text-color:rgb(66,66,66);
+    --text-color-second:rgba(66,66,66,0.7);
+    --background:rgb(226, 145, 145);
+    --box-shadow:0 5px 20px 1px rgba(0, 0, 0, 0.5);
+    --lineend-color: rgb(0, 0, 0);
+    --background-contact: rgb(255, 255, 255);
+}
+[data-theme="dark"]{
+    --primary-color:rgb(255,165,0);
+    --text-color:rgb(255, 255, 255);
+    --text-color-second:rgba(224, 224, 224, 0.7);
+    --background:rgb(0, 0, 0);
+    --box-shadow:0 5px 20px 1px rgba(0, 0, 0, 0.5);
+    --lineend-color: rgb(255, 255, 255);
+    --background-contact: rgb(0, 0, 0);
+
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--background);
+ 
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23f7cccf' fill-opacity='0.77'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    margin:0;
+    color: var(--text-color);
+}
+*{
+    font-family: 'Mitr', sans-serif;
+}
+h1{
+    font-size: 100px;
+    margin-bottom: 0;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+}
+h2{
+    color:var(--text-color-second);
+}
+.title-group{
+    text-align: center;
+}
+.title-group span{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+nav{
+    position:fixed;
+    z-index: 10;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    padding: 15px;
+    width: 100%;
+    background: rgba(223, 184, 184, 0.5);
+}
+a{
+    margin-right: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+a:hover {
+    color:var(--text-color);
+    border-bottom: 3px solid;
+}
+.theme-switch-container{
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 20px;
+    top: 25px;
+}
+.theme-switch-container span{
+    margin-right: 5px;
+    font-size: 18px;
+}
+.toggle-text{
+    position:relative;
+    top: -4px;
+    right: 5px;
+    color:var(--text-color)
+}
+.theme-switch{
+    display: inline-block;
+    height: 34px;
+    position:relative;
+    width: 60px;
+}
+.theme-switch input{
+    display: none;
+}
+/*กล่องหลัง*/
+.slider{
+    background: rgb(255,223,0);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+/*กล่องหน้า*/
+.slider::before{
+    background: #fff;
+    content: "";
+    bottom: 4px;
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4;
+    width: 26px;
+}
+/*ถ้าติ๊กถูกจะสไลด์ไปทางขวา*/
+input:checked +.slider::before {
+    transform:translate(26px);
+}
+/*โค้งวงกลม*/
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+} 
+.fa-solid{
+    font-size: 30px;
+    margin-right: 5px;
+}
+.headproject{
+    padding: 2px;
+    width: 100%;
+    /*background: var(--lineend-color);*/
+    margin: -30px;
+}
+.photoProfile{
+    margin: 40px;
+    padding-right: 60%;
+    width: 25%;
+    height: 25%;
+    animation-name: anim-jump;
+    animation-duration: 1s;
+}
+
+@keyframes anim-jump {
+    0%{
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100%{
+        transform:translateY(0%);
+    }
+}
+
+
+
+.textProfile{
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: -40%;
+    margin-left: 35%;
+    text-align: left;
+    letter-spacing: 0.5px;
+    line-height: 80px;
+}
+
+@keyframes anim-Game1 {
+    0%{
+        transform: translateX(0%);
+       
+    }   
+    50%{
+        transform: translateX(300%);
+           
+    }
+    100%{
+        transform: translateX(0%);
+    }
+    
+}
+
+.Game1class{
+    margin-right: 120%;
+    animation-name: anim-Game1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    visibility: visible;
+}
+
+.Game2class{
+    
+    animation-name: anim-Game2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    visibility: visible;
+}
+.Game3class{
+    padding-top: 400px;
+  
+    animation-name: anim-Game3;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    visibility: visible;
+}
+@keyframes anim-Game3{
+    0%{
+        transform: translateX(0%);
+        transform: translateY(0%); 
+    }   
+    50%{
+        transform: translateX(-300%);
+         
+    }
+    100%{
+        transform: translateX(0%);
+        transform: translateY(0%); 
+    }
+    
+}
+@keyframes anim-Game2{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.closeit{
+    visibility: hidden;
+
+}
+
+
+.Gametitle{
+    background-color: rgba(12, 250, 92, 0.952);
+    width: 100%;
+    height: 100px;
+    color: rgb(231, 23, 23);
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: rgb(7, 230, 126);
+}
+.GameBG{
+    background: linear-gradient(360deg,yellow,green);
+    width: 100%;
+    height: 400px;
+}
+.Shadow{
+    
+    text-align: center;
+}
+
+.popup1{
+    width: 400px;
+    background: linear-gradient(260deg,yellow,green);
+    border-radius: 8px;
+    text-align: center;
+    position: fixed;
+    top:25%;
+    left:33%;
+    padding: 50px;
+    visibility: hidden; 
+    z-index: 100;
+}
+.popup2{
+    width: 400px;
+    background: linear-gradient(260deg,yellow,green);
+    border-radius: 8px;
+    text-align: center;
+    position: fixed;
+    top:25%;
+    left:33%;
+    padding: 50px;
+    visibility: hidden; 
+    z-index: 100;
+}
+.popup3{
+    width: 400px;
+    background: linear-gradient(260deg,yellow,green);
+    border-radius: 8px;
+    text-align: center;
+    position: fixed;
+    top:25%;
+    left:33%;
+    padding: 50px;
+    visibility: hidden; 
+    z-index: 100;
+}
+.openit{
+    visibility: visible;
+}
+.popup1 h2{
+    font-size: 35px;
+    margin: 30px 0 10px;
+}
+.popup1 img{
+    width: 300px;
+    margin-top: -220px;
+    padding-bottom: -500px;    
+}
+
+.popup1 button{
+    width: 100%;
+    margin-top: 50px;
+    background: #fff;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.popup2 h2{
+    font-size: 35px;
+    margin: 30px 0 10px;
+}
+.popup2 img{
+    width: 300px;
+    margin-top: -220px;
+    padding-bottom: -500px;    
+}
+
+.popup2 button{
+    width: 100%;
+    margin-top: 50px;
+    background: #fff;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.popup3 h2{
+    font-size: 35px;
+    margin: 30px 0 10px;
+}
+.popup3 img{
+    width: 300px;
+    margin-top: -220px;
+    padding-bottom: -500px;    
+}
+
+.popup3 button{
+    width: 100%;
+    margin-top: 50px;
+    background: #fff;
+    cursor: pointer;
+    padding: 15px;
+}
+
+
+.TC span:before{
+    content: '';
+    animation: textchange infinite 8s;
+}
+
+.title-group span::before{
+    content: '';
+    animation: textchange infinite 5s;
+}
+
+
+@keyframes textchange{
+    0%{
+        content: 'น'
+    }
+    5%{
+        content:'นา'
+    }
+    10%{
+        content: 'นาย';
+    }
+    15%{
+        content: 'นายอั';
+    }
+    20%{
+        content: 'นายอัง';
+    }
+    25%{
+        content: 'นายอังก';
+    }
+    30%{
+        content: 'นายอังกูร';
+    }
+    35%{
+        content: 'นายอังกูร อ';
+    }
+    40%{
+        content: 'นายอังกูร อา';
+    }
+    45%{
+        content: 'นายอังกูร อาจ';
+    }
+    50%{
+        content: 'นายอังกูร อาจธ';
+    }
+    55%{
+        content: 'นายอังกูร อาจธั';
+    }
+    60%{
+        content: 'นายอังกูร อาจธัญ';
+    }
+    65%{
+        content: 'นายอังกูร อาจธัญก';
+    }
+    70%{
+        content: 'นายอังกูร อาจธัญกร';
+    }
+    75%{
+        content: 'นายอังกูร อาจธัญกรณ์';
+    }
+}
+.BlockContact{
+    /*border: 1px solid #555;*/
+    width: 400px;
+    height: 400px;
+    left: 400px;
+    top: 100px;
+    position: relative;
+    border-radius: 25px;
+    background-color: #555;
+    overflow: hidden;
+    /*overflow ควบคุมให้อยู่ในพื้นที่กำหนด*/
+    
+  
+}
+.BGC{
+    position: absolute;
+    /*border: 1px solid red;*/
+    width: 500px;
+    height: 500px;
+    top: 200px;
+    left: 200px;
+    animation: line_anim 8s linear infinite;
+    transform-origin: top left;
+    background: linear-gradient(90deg,rgb(236, 46, 32),rgb(199, 106, 53));
+
+}
+@keyframes line_anim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1000deg);
+    }
+}
+.BLOCKSECTION{
+    position: absolute;
+    margin: 5px;
+    border-radius: 25px;
+    width: 390px;
+    height: 390px;
+    background-color: #555;
+    z-index: 1;
+   
+}
+
+.Contact{
+    width: 100%;
+    background: var(--background-contact);
+    text-align: center;
+    color: red;
+    margin-top: 700px;
+    height: 200px;
+}
+
+/*-----------------------*/
+
+.Bg_project{
+    position: relative;
+    margin-top: 300px;
+    width: 1200px;
+    height: 1200px;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.Neon_bg{
+    position: absolute;
+    width: 400px;
+    height: 1800px;
+    top: -200px;
+    left: 400px;
+    animation: line_anim 10s linear infinite;
+    background: linear-gradient(90deg,rgb(236, 46, 32),rgb(248, 247, 246));
+}
+.Non_neon{
+    
+    width: 1175px;
+    height: 1175px;
+    background-color: white;
+    border-radius: 25px;
+    z-index: 1;
+    margin: 12px;
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}
+.Pj_topic{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.Top_project{
+    width: 470px;
+    height: 341px;
+    background-color: gold;
+    margin-left: 370px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+.Top_project img{
+    
+    margin-left: 15px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.Poprsu{
+    width: 850px;
+    height: 450px;
+    background: black;
+    border-radius: 8px;
+    text-align: center;
+    position: fixed;
+    top: 11%;
+    left:15%;
+    padding: 50px;
+    z-index: 100;
+    visibility: hidden;
+    overflow: scroll;
+    color: lightgray;
+}
+.Poprsu span{
+    color: red;
+}
+.Poprsu h4{
+    color:rgb(10, 108, 255);
+    font-size: 20px;
+}
+
+.Xclose{
+    margin-left: 700px;
+    
+}
+.Certi img{
+    margin-left: 100px;    
+}
+
+.openrsu{
+    visibility: visible;
+}
+

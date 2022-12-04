@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Darkstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    
+</head>
+<body>
+    
+    <div class="theme-switch-container">
+        <span id="toggle-icon">
+            <span class="toggle-text">โหมดกลางวัน</span> <!--ตัวที่1 คือ0 -->
+            <i class="fa-solid fa-sun"></i>  <!--ตัวที่2 คือ1 -->
+            <!--<i class="fa-solid fa-moon"></i>!-->
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox" >
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <!--nav ใช้จัดกลุ่มลิ้ง ใช้id ลิ้งอยู่หน้าเดียวกัน-->
+    <nav id="nav">
+        <a href ="#home">หน้าแรก</a>
+        <a href="#game">มินิเกม</a>
+        <a href="#Introduce">ประวัติ</a>
+        <a href="#project">ผลงาน</a>
+        <a href="#contact">ช่องทางการติดต่อ</a>
+
+    </nav>
+    <section id="home">
+        <div class="title-group">
+            <span></span>
+             
+        </div>
+    </section>
+    <section id ="game">
+        <div class="Gametitle" id="Gametitle">
+            มาเล่นซ่อนแอบกันเถอะ พวกเราซ่อนพวกเธอตามหานะ ตามหาพวกเราให้เจอสิ!
+        </div>
+        <div class="GameBG">
+            <div class="Shadow">
+                <img src="img/GameShadow1.png" alt="" id="Gameshadow1" width="400px" height="400px">
+                <img src="img/GameShadow2.png" alt="" id="Gameshadow2" width="400px" height="400px">
+                <img src="img/GameShadow3.png" alt="" id="Gameshadow3" width="400px" height="400px">
+            </div>
+            <div class="popup1" id="popup1">
+                <img src="img/Game1.png">
+                <h2>บานา บากานา บานาน่า</h2>
+                <button type="button" onclick="closepopup()">เจอแล้ว</button>
+            </div>
+            <div class="popup2" id="popup2">
+                <img src="img/Game2.png">
+                <h2>ว้า แย่จังโดนเจอซะแล้ว</h2>
+                <button type="button" onclick="closepopup()">เจอแล้ว</button>
+            </div>
+            <div class="popup3" id="popup3">
+                <img src="img/Game3.png">
+                <h2>ดุดัน ไม่เกรงใจใคร</h2>
+                <button type="button" onclick="closepopup()">เจอแล้ว</button>
+            </div>
+           
+
+        </div>
+        
+    </section>
+    <section id="Introduce">
+        <div class="headproject"></div>
+        <h1>INTRODUCE</h1>  
+        <div class="photoProfile">
+            <img src="img/Profile1.png" alt="" id="imageProfile" width="100%" height="25%">
+        </div>
+        <div class = "textProfile"> ชื่อ : อังกูร อาจธัญกรณ์
+            <br>ชื่อเล่น : นาย 
+            <br>อายุ : 17 ปี
+            <br>เกิดวันที่ : 10 กุมภาพันธ์ พ.ศ.2548
+            <br>โรงเรียน : ยอแซฟอุปถัมภ์
+            <br>คติประจำใจ : ความล้มเหลวนำมาสู่การพัฒนา
+        </div>
+        
+        <div class = "Game1class" id = "Game1class">
+            <img src="img/Game1.png" alt="" id="Gameimg1" width="200px" height="200px">
+        </div>
+    <section id="project">
+        <div class="Pj_topic">
+            <br>ผลงาน
+        </div>
+        <div class = "Tip">
+            <h2>! click image to see information</h2>
+        </div>
+        <div class = Bg_project>
+            <div class = Neon_bg></div>
+            <div class = Non_neon>
+                <div class = "Top_project"> 
+                    <img src="Certi/Cer1.jpg"  id="Cer1" width="439px" height="310px">
+                </div>
+                <div class = "Certi">
+                    <br><img src="Certi/Cer2.jpg" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer3.jpg" alt="" id="" width="439px" height="310px">
+                    <br><img src="Certi/Cer4.png" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer5.png" alt="" id="" width="439px" height="310px">
+                    <br><img src="Certi/Cer6.png" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer7.jpg" alt="" id="" width="439px" height="310px">
+                    <br><img src="Certi/Cer8.jpg" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer9.jpg" alt="" id="" width="439px" height="310px">
+                    <br><img src="Certi/Cer10.jpg" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer11.jpg" alt="" id="" width="439px" height="310px">
+                    <br><img src="Certi/Cer12.jpg" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer13.jpg" alt="" id="" width="439px" height="310px">
+                    <br><img src="Certi/Cer14.jpg" alt="" id="" width="439px" height="310px">
+                    <img src="Certi/Cer15.jpg" alt="" id="" width="439px" height="310px">
+
+                </div>
+               
+            </div>
+        </div>
+        <div class = "Game2class" id = "Game2class">
+            <img src="img/Game2.png" alt="" id="Gameimg2" width="250px" height="250px">
+        </div>
+
+    </section>
+              
+    </section>
+    <section id="contact">
+        <div class = "Game3class" id = "Game3class">
+            <img src="img/Game3.png" alt="" id="Gameimg3" width="250px" height="250px">
+        </div>
+        <div class="Contact">
+            <h2>facebook : อังกูร อาจธัญกรณ์</h2>
+            <h2>Ig : nnineard</h2>
+            <h2>Phone : 080-897-7374</h2>
+           
+        </div>
+        
+        
+    </section>
+ 
+    <div class="Poprsu" id="Poprsu">
+        <img src="Certi/X.png"width="100px" height="100px" id="Xclose" class="Xclose" >
+        <br><img src="Certi/RSU.png" width="300px" height="200px">
+        <h2>RSU Rookie Game Dev 2022</h2>
+        <h3>  ชนะเลิศการแข่งขัน RSU Rookie Game Dev 2022 ที่จัดทำโดยมหาวิทยาลัยรังสิต สาขาคอมพิวเตอร์เกมและE-Sport โดยจะมีการอบรมก่อนในวันที่ 9 กรกฎาคม - 6 สิงหาคม 2565 หลังจากเสร็จสิ้นกรรมการได้ให้โจทย์<span> "Multiverse" </span>เพื่อนำไปสร้างเกม ซึ่งเกมที่เราสร้างมีชื่อว่า <span>"Up Side Down"</span>  </h3>    
+        <h4>และหลังจากจบการแข่งขันเราได้ขายลิขสิทธิ์เกมให้บริษัท bot n life</h4>
+        <img src ="Certi/RSU8.jpg" width="300px" height="300px">
+        <br><img src ="Certi/RSU2.png" width="300px" height="300px">
+        <img src ="Certi/RSU3.png" width="300px" height="300px">
+        <br><img src ="Certi/RSU1.png" width="300px" height="300px">
+        <br><img src ="Certi/RSU4.jpg" width="600px" height="300px">
+        <img src ="Certi/RSU5.jpg" width="45%" height="45%">
+        <img src ="Certi/RSU6.jpg" width="45%" height="45%">
+        <img src ="Certi/RSU7.jpg" width="45%" height="45%">
+        <br><img src ="Certi/RSU9.jpg" width="45%" height="55%">
+        <img src ="Certi/RSU10.jpg" width="45%" height="55%">
+        <br><img src ="Certi/RSU11.jpg" width="45%" height="55%">
+        <img src ="Certi/RSU12.jpg" width="45%" height="55%">
+        <br><img src ="Certi/RSU13.jpg" width="45%" height="55%">
+        <img src ="Certi/RSU14.jpg" width="45%" height="55%">
+        
+        
+        
+    </div>
+    <script src="darkscript.js"></script>
+</body>
+</html>
